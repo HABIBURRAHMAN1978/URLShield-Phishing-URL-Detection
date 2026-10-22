@@ -1,0 +1,38 @@
+{
+  "project": "COM6011 Phishing URL Detection",
+  "model_name": "Logistic Regression",
+  "selected_candidate": "LR / full URL ngrams",
+  "threshold": 0.575,
+  "feature_mode": "full_char",
+  "feature_mode_label": "Full-URL character n-grams",
+  "full_url_model": true,
+  "heldout_metrics": {
+    "threshold": 0.575,
+    "accuracy": 0.8769993568865009,
+    "balanced_accuracy": 0.8432644946873674,
+    "precision": 0.9478718671214593,
+    "recall": 0.7098117607862735,
+    "f1": 0.8117478964915066,
+    "f2": 0.747351558663268,
+    "fpr": 0.023282771411538717,
+    "tn": 29491,
+    "fp": 703,
+    "fn": 5226,
+    "tp": 12783,
+    "roc_auc": 0.9231092192012375,
+    "average_precision": 0.9134133329069445,
+    "n": 48203,
+    "model": "LR / full URL ngrams",
+    "scope": "Mixed PhiUSIIL + historical ISCX, registered-domain-disjoint; historical labels not current security ground truth",
+    "full_url_features_selected": true
+  },
+  "guard_status": "VALIDATION_GUARDS_MET",
+  "validation_historical_path_n": 3526,
+  "limitations": [
+    "Uncalibrated model screening score (not true risk probability)",
+    "Historical benign labels are not current security guarantees",
+    "External Majestic domains are not certified benign URLs",
+    "No live reputation or site visits",
+    "Source bias and false positives remain possible"
+  ]
+}
